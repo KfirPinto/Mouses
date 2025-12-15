@@ -1,0 +1,33 @@
+# === Python & System Junk ===
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# === Large Data Files (Raw Sequencing) ===
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+
+# === Specific Data Folders (Based on your image) ===
+databases/
+mouses_data/clean_fastq/
+mouses_data/classifier/
+# We ignore the raw fastq in mouses_2_data but KEEP the metadata.txt
+mouses_2_data/*.fastq.gz
+
+# === Software & Installers (Don't track these!) ===
+sratoolkit*/
+Miniconda3*.sh
+*.tar.gz
+*.zip
+
+# === Intermediate Processing Files (Optional) ===
+# אם אתה רוצה לשמור את התוצאות המעובדות בגיט, תשאיר את השורות האלו בהערה.
+# אם אתה רוצה שגיט יתעלם מהקבצים שנוצרו (כמו ה-csv הסופיים) תוריד את הסולמית:
+# processed_*.csv
+# Union_tables/*.csv
+

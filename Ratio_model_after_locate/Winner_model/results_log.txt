@@ -1,0 +1,32 @@
+--- Log started. Saving to: /home/pintokf/Projects/Microbium/Mouses/Ratio_model_after_locate/winners/results_log.txt ---
+--- Starting LOOCV Pipeline (Age 2 Months Only) ---
+Total before filter -> Censored: 50, Uncensored: 22
+Total AFTER filter (Age 2) -> Censored: 14, Uncensored: 6
+Number of unique cages in Uncensored (Age 2): 6
+
+--- Starting Cross-Validation Loop ---
+Iteration 1: Testing on Cage 30 (1 mice)
+Iteration 2: Testing on Cage 31 (1 mice)
+Iteration 3: Testing on Cage 34 (1 mice)
+Iteration 4: Testing on Cage 40 (1 mice)
+Iteration 5: Testing on Cage 41 (1 mice)
+Iteration 6: Testing on Cage 45 (1 mice)
+
+========================================
+FINAL AGGREGATED RESULTS (AGE 2)
+========================================
+           diff  predicted_score Cage
+ID                                   
+30-0_5-20   390       519.099437   30
+31-1_5-20   360       518.471278   31
+34-0_5-20   330       586.697693   34
+40-0_5-20   390       428.060416   40
+41-1_5-20   420       557.002418   41
+45-0_5-20   300       497.519723   45
+
+--- Global Model Performance (Age 2) ---
+Concordance Index (CI): 0.5714
+Spearman Correlation:   0.1160 (p-value: 0.8268)
+Pearson Correlation:    -0.0960 (p-value: 0.8564)
+
+Plot saved to: /home/pintokf/Projects/Microbium/Mouses/Ratio_model_after_locate/winners/LOOCV_age2_results_7.png

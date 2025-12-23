@@ -1,0 +1,125 @@
+import warnings
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import spearmanr, pearsonr
+from sklearn.model_selection import LeaveOneGroupOut
+from LBL import LBL
+
+# --- 1. Suppress Warnings ---
+warnings.filterwarnings("ignore")
+pd.options.mode.chained_assignment = None 
+
+def calculate_concordance_index(y_true, y_pred):
+    n = len(y_true)
+    count = 0
+    correct = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            if y_true[i] != y_true[j]:
+                count += 1
+                if (y_true[i] > y_true[j] and y_pred[i] > y_pred[j]) or \
+                   (y_true[i] < y_true[j] and y_pred[i] < y_pred[j]):
+                    correct += 1
+                elif y_pred[i] == y_pred[j]:
+                    correct += 0.5
+    return correct / count if count > 0 else 0.5
+
+if __name__ == '__main__':
+    print("--- Starting LOOCV Pipeline (Age 4 Months Only) ---")
+
+    # --- 2. Load Data ---
+    base_path = "/home/pintokf/Projects/Microbium/Mouses/Ratio_model_after_locate/preprocces_ratio_locate/"
+    censored = pd.read_csv(base_path + "locate_censored_level_7.csv", index_col=0)
+    uncensored = pd.read_csv(base_path + "locate_uncensored_level_7.csv", index_col=0)
+
+    # --- 3. Clean Duplicates ---
+    censored = censored[~censored.index.duplicated(keep='first')]
+    uncensored = uncensored[~uncensored.index.duplicated(keep='first')]
+
+    # --- 4. FILTER BY AGE (The Change) ---
+    print(f"Total before filter -> Censored: {len(censored)}, Uncensored: {len(uncensored)}")
+    
+    censored = censored[censored["AgeMonths"] == 4]
+    uncensored = uncensored[uncensored["AgeMonths"] == 4]
+    
+    print(f"Total AFTER filter (Age 4) -> Censored: {len(censored)}, Uncensored: {len(uncensored)}")
+
+    # Extract Cage IDs
+    censored["Cage"] = [i.split("-")[0] for i in censored.index]
+    uncensored["Cage"] = [i.split("-")[0] for i in uncensored.index]
+
+    print(f"Number of unique cages in Uncensored (Age 4): {uncensored['Cage'].nunique()}")
+
+    if len(uncensored) < 2:
+        print("ERROR: Not enough data for cross-validation after filtering!")
+        exit()
+
+    # --- 5. Initialize Leave-One-Group-Out ---
+    logo = LeaveOneGroupOut()
+    all_predictions_list = []
+
+print("\n--- Starting Cross-Validation Loop ---")
+
+for j in range(1, 11):
+    # FIX: Reset the predictions list for each 'j' iteration
+    all_predictions_list = []
+        
+    # Split by CAGE
+    for i, (train_idx, test_idx) in enumerate(logo.split(uncensored, groups=uncensored["Cage"])):
+
+        # --- A. Split Data ---
+        # FIX: Indented this entire block to be inside the inner loop
+        train_uncensored = uncensored.iloc[train_idx]
+        test_uncensored = uncensored.iloc[test_idx]
+
+        current_test_cage = test_uncensored["Cage"].iloc[0]
+        print(f"Iteration j={j}, Split {i+1}: Testing on Cage {current_test_cage} ({len(test_uncensored)} mice)")
+
+        # B. Train Model (on filtered data)
+        lbl = LBL("diff", "MiceName", "AgeMonths", num_of_bact=10, feature_selection=j, with_microbiome=True,
+                      augmented_censored=False, gamma=0.0, only_microbiome=True, alpha=0.001)
+
+        # Use .copy() to prevent crashes
+        lbl.fit(train_uncensored.copy(), censored.copy())
+
+        # C. Predict
+        preds = lbl.predict(test_uncensored)
+
+        # D. Store results
+        fold_results = test_uncensored[["diff"]].copy()
+        fold_results["predicted_score"] = preds
+        fold_results["Cage"] = current_test_cage
+        all_predictions_list.append(fold_results)
+
+    # --- 6. Aggregate & Score (Happens once per 'j' loop) ---
+    final_results = pd.concat(all_predictions_list)
+
+    print("\n" + "="*40)
+    print(f"FINAL AGGREGATED RESULTS (AGE 4) - Feature Selection: {j}")
+    print("="*40)
+    print(final_results)
+
+    y_true = final_results["diff"].values
+    y_pred = final_results["predicted_score"].values
+
+    spearman_corr, spearman_p = spearmanr(y_true, y_pred)
+    pearson_corr, pearson_p = pearsonr(y_true, y_pred)
+    c_index = calculate_concordance_index(y_true, y_pred)
+
+    print(f"\n--- Global Model Performance (Age 4, j={j}) ---")
+    print(f"Concordance Index (CI): {c_index:.4f}")
+    print(f"Spearman Correlation:   {spearman_corr:.4f} (p-value: {spearman_p:.4g})")
+    print(f"Pearson Correlation:    {pearson_corr:.4f} (p-value: {pearson_p:.4g})")
+
+    # --- 7. Visualize ---
+    plt.figure(figsize=(8, 6))
+    plt.scatter(y_true, y_pred, color='green', alpha=0.7, label=f'Age 4 Mice (j={j})')
+    plt.xlabel("True Survival Diff")
+    plt.ylabel("Predicted Score")
+    plt.title(f"LOOCV Results (Age 4 Only) - j={j}\nCI: {c_index:.2f} | Spearman: {spearman_corr:.2f}")
+    plt.grid(True, alpha=0.3)
+    plt.legend()
+    
+    plt.savefig(f"LOOCV_age4_results_j{j}.png")
+    print(f"\nPlot saved as 'LOOCV_age4_results_j{j}.png'")

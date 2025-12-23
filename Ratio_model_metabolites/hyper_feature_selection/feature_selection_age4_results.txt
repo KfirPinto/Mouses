@@ -1,0 +1,531 @@
+--- Starting Feature Selection Sweep (Detailed Output) ---
+Log saved to: /home/pintokf/Projects/Microbium/Mouses/Ratio_model_metabolites/hyper_feature_selection/feature_selection_age4_results.txt
+Total Censored samples (Age 4): 36
+Total Uncensored samples (Age 4): 16
+
+############################################################
+>>> Testing Top 10 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390  481.834149  14
+14-1_5-20                     
+
+   [Cage 20] Predictions:
+ID         240  429.763659  20
+20-1_5-20                     
+
+   [Cage 21] Predictions:
+ID         330  391.122378  21
+21-1_5-20                     
+
+   [Cage 24] Predictions:
+ID         390  422.187633  24
+24-0_5-20  390  402.556248  24
+24-2_5-20                     
+
+   [Cage 29] Predictions:
+ID         330  471.483013  29
+29-2_5-20                     
+
+   [Cage 30] Predictions:
+ID         330  393.009268  30
+30-2_7-20                     
+
+   [Cage 33] Predictions:
+ID         390  443.633197  33
+33-1_7-20                     
+
+   [Cage 34] Predictions:
+ID         270  417.871843  34
+34-0_7-20                     
+
+   [Cage 35] Predictions:
+ID         240  426.262479  35
+35-2_7-20                     
+
+   [Cage 36] Predictions:
+ID         390  424.358072  36
+36-2_7-20                     
+
+   [Cage 37] Predictions:
+ID         180  443.481296  37
+37-0_7-20  270  448.862894  37
+37-2_7-20                     
+
+   [Cage 41] Predictions:
+ID         360  432.534478  41
+41-1_7-20                     
+
+   [Cage 45] Predictions:
+ID         240  411.854118  45
+45-0_7-20                     
+
+   [Cage 47] Predictions:
+ID         270  467.129003  47
+47-1_7-20                     
+
+   >>> Summary for k=10: CI=0.5050 | Spearman=-0.0060
+
+############################################################
+>>> Testing Top 25 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390  506.672779  14
+14-1_5-20                     
+
+   [Cage 20] Predictions:
+ID         240  393.060834  20
+20-1_5-20                     
+
+   [Cage 21] Predictions:
+ID         330  278.8961  21
+21-1_5-20                   
+
+   [Cage 24] Predictions:
+ID         390  478.333916  24
+24-0_5-20  390  394.450194  24
+24-2_5-20                     
+
+   [Cage 29] Predictions:
+ID         330  450.034733  29
+29-2_5-20                     
+
+   [Cage 30] Predictions:
+ID         330  372.213959  30
+30-2_7-20                     
+
+   [Cage 33] Predictions:
+ID         390  393.828296  33
+33-1_7-20                     
+
+   [Cage 34] Predictions:
+ID         270  469.919038  34
+34-0_7-20                     
+
+   [Cage 35] Predictions:
+ID         240  397.353695  35
+35-2_7-20                     
+
+   [Cage 36] Predictions:
+ID         390  428.507767  36
+36-2_7-20                     
+
+   [Cage 37] Predictions:
+ID         180  292.011412  37
+37-0_7-20  270  426.345047  37
+37-2_7-20                     
+
+   [Cage 41] Predictions:
+ID         360  409.191114  41
+41-1_7-20                     
+
+   [Cage 45] Predictions:
+ID         240  411.739311  45
+45-0_7-20                     
+
+   [Cage 47] Predictions:
+ID         270  390.408854  47
+47-1_7-20                     
+
+   >>> Summary for k=25: CI=0.6535 | Spearman=0.3766
+
+############################################################
+>>> Testing Top 50 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390  718.682481  14
+14-1_5-20                     
+
+   [Cage 20] Predictions:
+ID         240  291.387238  20
+20-1_5-20                     
+
+   [Cage 21] Predictions:
+ID         330  352.918217  21
+21-1_5-20                     
+
+   [Cage 24] Predictions:
+ID         390  591.599769  24
+24-0_5-20  390  270.732213  24
+24-2_5-20                     
+
+   [Cage 29] Predictions:
+ID         330  368.136129  29
+29-2_5-20                     
+
+   [Cage 30] Predictions:
+ID         330  389.167909  30
+30-2_7-20                     
+
+   [Cage 33] Predictions:
+ID         390  274.407687  33
+33-1_7-20                     
+
+   [Cage 34] Predictions:
+ID         270  477.364096  34
+34-0_7-20                     
+
+   [Cage 35] Predictions:
+ID         240  392.976076  35
+35-2_7-20                     
+
+   [Cage 36] Predictions:
+ID         390  562.206525  36
+36-2_7-20                     
+
+   [Cage 37] Predictions:
+ID         180  439.843299  37
+37-0_7-20  270  507.113847  37
+37-2_7-20                     
+
+   [Cage 41] Predictions:
+ID         360  548.901504  41
+41-1_7-20                     
+
+   [Cage 45] Predictions:
+ID         240  331.897519  45
+45-0_7-20                     
+
+   [Cage 47] Predictions:
+ID         270  397.098125  47
+47-1_7-20                     
+
+   >>> Summary for k=50: CI=0.5941 | Spearman=0.2049
+
+############################################################
+>>> Testing Top 100 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390  466.891296  14
+14-1_5-20                     
+
+   [Cage 20] Predictions:
+ID         240  405.689473  20
+20-1_5-20                     
+
+   [Cage 21] Predictions:
+ID         330  118.219692  21
+21-1_5-20                     
+
+   [Cage 24] Predictions:
+ID         390  456.962466  24
+24-0_5-20  390  340.595504  24
+24-2_5-20                     
+
+   [Cage 29] Predictions:
+ID         330  563.220597  29
+29-2_5-20                     
+
+   [Cage 30] Predictions:
+ID         330  318.375461  30
+30-2_7-20                     
+
+   [Cage 33] Predictions:
+ID         390  336.647007  33
+33-1_7-20                     
+
+   [Cage 34] Predictions:
+ID         270  444.716568  34
+34-0_7-20                     
+
+   [Cage 35] Predictions:
+ID         240  470.170325  35
+35-2_7-20                     
+
+   [Cage 36] Predictions:
+ID         390  607.389122  36
+36-2_7-20                     
+
+   [Cage 37] Predictions:
+ID         180  358.605012  37
+37-0_7-20  270  390.440631  37
+37-2_7-20                     
+
+   [Cage 41] Predictions:
+ID         360  614.027736  41
+41-1_7-20                     
+
+   [Cage 45] Predictions:
+ID         240  367.498121  45
+45-0_7-20                     
+
+   [Cage 47] Predictions:
+ID         270  328.866612  47
+47-1_7-20                     
+
+   >>> Summary for k=100: CI=0.5644 | Spearman=0.1506
+
+############################################################
+>>> Testing Top 250 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390  512.344946  14
+14-1_5-20                     
+
+   [Cage 20] Predictions:
+ID         240  636.330256  20
+20-1_5-20                     
+
+   [Cage 21] Predictions:
+ID         330  5355.034235  21
+21-1_5-20                      
+
+   [Cage 24] Predictions:
+ID         390  -1658.170242  24
+24-0_5-20  390 -10448.089283  24
+24-2_5-20                       
+
+   [Cage 29] Predictions:
+ID         330  493.478127  29
+29-2_5-20                     
+
+   [Cage 30] Predictions:
+ID         330  628.929606  30
+30-2_7-20                     
+
+   [Cage 33] Predictions:
+ID         390  1075.584219  33
+33-1_7-20                      
+
+   [Cage 34] Predictions:
+ID         270  166.455891  34
+34-0_7-20                     
+
+   [Cage 35] Predictions:
+ID         240  413.465224  35
+35-2_7-20                     
+
+   [Cage 36] Predictions:
+ID         390  436.904673  36
+36-2_7-20                     
+
+   [Cage 37] Predictions:
+ID         180  381.677727  37
+37-0_7-20  270  413.029167  37
+37-2_7-20                     
+
+   [Cage 41] Predictions:
+ID         360  416.789184  41
+41-1_7-20                     
+
+   [Cage 45] Predictions:
+ID         240 -323.097257  45
+45-0_7-20                     
+
+   [Cage 47] Predictions:
+ID         270  466.916604  47
+47-1_7-20                     
+
+   >>> Summary for k=250: CI=0.5545 | Spearman=0.1055
+
+############################################################
+>>> Testing Top 500 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390  26.554058  14
+14-1_5-20                    
+
+   [Cage 20] Predictions:
+ID         240  39571.322489  20
+20-1_5-20                       
+
+   [Cage 21] Predictions:
+ID         330  124482.280747  21
+21-1_5-20                        
+
+   [Cage 24] Predictions:
+ID         390   895.854091  24
+24-0_5-20  390  1775.646705  24
+24-2_5-20                      
+
+   [Cage 29] Predictions:
+ID         330 -713.947679  29
+29-2_5-20                     
+
+   [Cage 30] Predictions:
+ID         330 -38685.118864  30
+30-2_7-20                       
+
+   [Cage 33] Predictions:
+ID         390 -2713.112394  33
+33-1_7-20                      
+
+   [Cage 34] Predictions:
+ID         270 -76694.712169  34
+34-0_7-20                       
+
+   [Cage 35] Predictions:
+ID         240  3087.820599  35
+35-2_7-20                      
+
+   [Cage 36] Predictions:
+ID         390  185115.574231  36
+36-2_7-20                        
+
+   [Cage 37] Predictions:
+ID         180  2662.302873  37
+37-0_7-20  270   557.823246  37
+37-2_7-20                      
+
+   [Cage 41] Predictions:
+ID         360 -122211.464593  41
+41-1_7-20                        
+
+   [Cage 45] Predictions:
+ID         240 -566.502034  45
+45-0_7-20                     
+
+   [Cage 47] Predictions:
+ID         270  4.211868e+06  47
+47-1_7-20                       
+
+   >>> Summary for k=500: CI=0.4455 | Spearman=-0.1717
+
+############################################################
+>>> Testing Top 1000 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390 -1.345118e+09  14
+14-1_5-20                       
+
+   [Cage 20] Predictions:
+ID         240 -2.389453e+08  20
+20-1_5-20                       
+
+   [Cage 21] Predictions:
+ID         330 -2.012055e+09  21
+21-1_5-20                       
+
+   [Cage 24] Predictions:
+ID         390 -1.798977e+06  24
+24-0_5-20  390 -8.172161e+06  24
+24-2_5-20                       
+
+   [Cage 29] Predictions:
+ID         330  1.915321e+11  29
+29-2_5-20                       
+
+   [Cage 30] Predictions:
+ID         330  1.668848e+09  30
+30-2_7-20                       
+
+   [Cage 33] Predictions:
+ID         390 -7.576875e+09  33
+33-1_7-20                       
+
+   [Cage 34] Predictions:
+ID         270 -2.072647e+09  34
+34-0_7-20                       
+
+   [Cage 35] Predictions:
+ID         240  8.100056e+09  35
+35-2_7-20                       
+
+   [Cage 36] Predictions:
+ID         390  3.110915e+09  36
+36-2_7-20                       
+
+   [Cage 37] Predictions:
+ID         180  7.567085e+06  37
+37-0_7-20  270 -1.430855e+07  37
+37-2_7-20                       
+
+   [Cage 41] Predictions:
+ID         360 -8.816202e+07  41
+41-1_7-20                       
+
+   [Cage 45] Predictions:
+ID         240  2.062998e+07  45
+45-0_7-20                       
+
+   [Cage 47] Predictions:
+ID         270 -4.836145e+07  47
+47-1_7-20                       
+
+   >>> Summary for k=1000: CI=0.4356 | Spearman=-0.1838
+
+############################################################
+>>> Testing Top 1889 features <<<
+############################################################
+
+   [Cage 14] Predictions:
+ID         390  1.179730e+16  14
+14-1_5-20                       
+
+   [Cage 20] Predictions:
+ID         240  3.665565e+16  20
+20-1_5-20                       
+
+   [Cage 21] Predictions:
+ID         330 -1.169863e+15  21
+21-1_5-20                       
+
+   [Cage 24] Predictions:
+ID         390 -4.057865e+13  24
+24-0_5-20  390 -3.474502e+14  24
+24-2_5-20                       
+
+   [Cage 29] Predictions:
+ID         330 -7.150833e+15  29
+29-2_5-20                       
+
+   [Cage 30] Predictions:
+ID         330  2.045996e+18  30
+30-2_7-20                       
+
+   [Cage 33] Predictions:
+ID         390  1.005285e+15  33
+33-1_7-20                       
+
+   [Cage 34] Predictions:
+ID         270 -1.582132e+13  34
+34-0_7-20                       
+
+   [Cage 35] Predictions:
+ID         240  5.106247e+15  35
+35-2_7-20                       
+
+   [Cage 36] Predictions:
+ID         390  2.940799e+15  36
+36-2_7-20                       
+
+   [Cage 37] Predictions:
+ID         180  2.709776e+12  37
+37-0_7-20  270  1.024402e+12  37
+37-2_7-20                       
+
+   [Cage 41] Predictions:
+ID         360  1.333723e+14  41
+41-1_7-20                       
+
+   [Cage 45] Predictions:
+ID         240 -3.683362e+16  45
+45-0_7-20                       
+
+   [Cage 47] Predictions:
+ID         270 -8.008941e+15  47
+47-1_7-20                       
+
+   >>> Summary for k=1889: CI=0.5545 | Spearman=0.0934
+
+==================================================
+FINAL COMPARISON TABLE
+==================================================
+ Features_Selected       CI  Spearman_Corr  P_Value
+                25 0.653465       0.376615 0.150478
+                50 0.594059       0.204879 0.446557
+               100 0.564356       0.150646 0.577597
+               250 0.554455       0.105452 0.697513
+              1889 0.554455       0.093401 0.730809
+                10 0.504950      -0.006026 0.982330
+               500 0.445545      -0.171737 0.524792
+              1000 0.435644      -0.183788 0.495644
+
+Best configuration: 25.0 features.

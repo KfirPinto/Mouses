@@ -1,0 +1,228 @@
+--- Starting Feature Selection Sweep (Detailed Output) ---
+Log saved to: /home/pintokf/Projects/Microbium/Mouses/Ratio_model_microbium/hyper_feature_selection_level_7/feature_selection_age2_results.txt
+Total Censored samples (Age 2): 14
+Total Uncensored samples (Age 2): 6
+
+############################################################
+>>> Testing Top 5 features <<<
+############################################################
+
+   [Cage 30] Predictions:
+ID         390  449.513319  30
+30-0_5-20                     
+
+   [Cage 31] Predictions:
+ID         360  520.990966  31
+31-1_5-20                     
+
+   [Cage 34] Predictions:
+ID         330  511.676224  34
+34-0_5-20                     
+
+   [Cage 40] Predictions:
+ID         390  456.586695  40
+40-0_5-20                     
+
+   [Cage 41] Predictions:
+ID         420  488.195161  41
+41-1_5-20                     
+
+   [Cage 45] Predictions:
+ID         300  515.566133  45
+45-0_5-20                     
+
+   >>> Summary for k=5: CI=0.2857 | Spearman=-0.6377 | Pearson=-0.6582
+
+############################################################
+>>> Testing Top 10 features <<<
+############################################################
+
+   [Cage 30] Predictions:
+ID         390  482.473637  30
+30-0_5-20                     
+
+   [Cage 31] Predictions:
+ID         360  492.928006  31
+31-1_5-20                     
+
+   [Cage 34] Predictions:
+ID         330  526.772792  34
+34-0_5-20                     
+
+   [Cage 40] Predictions:
+ID         390  453.434669  40
+40-0_5-20                     
+
+   [Cage 41] Predictions:
+ID         420  508.063434  41
+41-1_5-20                     
+
+   [Cage 45] Predictions:
+ID         300  482.274586  45
+45-0_5-20                     
+
+   >>> Summary for k=10: CI=0.5000 | Spearman=0.0290 | Pearson=-0.1643
+
+############################################################
+>>> Testing Top 15 features <<<
+############################################################
+
+   [Cage 30] Predictions:
+ID         390  463.559236  30
+30-0_5-20                     
+
+   [Cage 31] Predictions:
+ID         360  561.938976  31
+31-1_5-20                     
+
+   [Cage 34] Predictions:
+ID         330  470.233573  34
+34-0_5-20                     
+
+   [Cage 40] Predictions:
+ID         390  395.144672  40
+40-0_5-20                     
+
+   [Cage 41] Predictions:
+ID         420  617.32781  41
+41-1_5-20                    
+
+   [Cage 45] Predictions:
+ID         300  435.933183  45
+45-0_5-20                     
+
+   >>> Summary for k=15: CI=0.6429 | Spearman=0.3189 | Pearson=0.4269
+
+############################################################
+>>> Testing Top 20 features <<<
+############################################################
+
+   [Cage 30] Predictions:
+ID         390  465.617876  30
+30-0_5-20                     
+
+   [Cage 31] Predictions:
+ID         360  594.639285  31
+31-1_5-20                     
+
+   [Cage 34] Predictions:
+ID         330  532.337717  34
+34-0_5-20                     
+
+   [Cage 40] Predictions:
+ID         390  286.576252  40
+40-0_5-20                     
+
+   [Cage 41] Predictions:
+ID         420  604.040399  41
+41-1_5-20                     
+
+   [Cage 45] Predictions:
+ID         300  446.654013  45
+45-0_5-20                     
+
+   >>> Summary for k=20: CI=0.6429 | Spearman=0.3189 | Pearson=0.0533
+
+############################################################
+>>> Testing Top 25 features <<<
+############################################################
+
+   [Cage 30] Predictions:
+ID         390  502.647358  30
+30-0_5-20                     
+
+   [Cage 31] Predictions:
+ID         360  549.126286  31
+31-1_5-20                     
+
+   [Cage 34] Predictions:
+ID         330  549.278781  34
+34-0_5-20                     
+
+   [Cage 40] Predictions:
+ID         390  259.051113  40
+40-0_5-20                     
+
+   [Cage 41] Predictions:
+ID         420  581.795164  41
+41-1_5-20                     
+
+   [Cage 45] Predictions:
+ID         300  415.132637  45
+45-0_5-20                     
+
+   >>> Summary for k=25: CI=0.5714 | Spearman=0.2609 | Pearson=0.0780
+
+############################################################
+>>> Testing Top 30 features <<<
+############################################################
+
+   [Cage 30] Predictions:
+ID         390  507.467839  30
+30-0_5-20                     
+
+   [Cage 31] Predictions:
+ID         360  549.442521  31
+31-1_5-20                     
+
+   [Cage 34] Predictions:
+ID         330  536.768337  34
+34-0_5-20                     
+
+   [Cage 40] Predictions:
+ID         390  379.133907  40
+40-0_5-20                     
+
+   [Cage 41] Predictions:
+ID         420  560.065659  41
+41-1_5-20                     
+
+   [Cage 45] Predictions:
+ID         300  476.411293  45
+45-0_5-20                     
+
+   >>> Summary for k=30: CI=0.6429 | Spearman=0.3189 | Pearson=0.0315
+
+############################################################
+>>> Testing Top 35 features <<<
+############################################################
+
+   [Cage 30] Predictions:
+ID         390  517.227485  30
+30-0_5-20                     
+
+   [Cage 31] Predictions:
+ID         360  549.870469  31
+31-1_5-20                     
+
+   [Cage 34] Predictions:
+ID         330  551.934542  34
+34-0_5-20                     
+
+   [Cage 40] Predictions:
+ID         390  386.398531  40
+40-0_5-20                     
+
+   [Cage 41] Predictions:
+ID         420  564.049998  41
+41-1_5-20                     
+
+   [Cage 45] Predictions:
+ID         300  462.251534  45
+45-0_5-20                     
+
+   >>> Summary for k=35: CI=0.5714 | Spearman=0.2609 | Pearson=0.0986
+
+==================================================
+FINAL COMPARISON TABLE
+==================================================
+ Features_Selected       CI  Spearman_Corr  Pearson_Corr  P_Value_Spearman
+                15 0.642857       0.318874      0.426868          0.537901
+                20 0.642857       0.318874      0.053348          0.537901
+                30 0.642857       0.318874      0.031508          0.537901
+                25 0.571429       0.260897      0.078025          0.617534
+                35 0.571429       0.260897      0.098581          0.617534
+                10 0.500000       0.028989     -0.164308          0.956529
+                 5 0.285714      -0.637748     -0.658181          0.173071
+
+Best configuration: 15.0 features.

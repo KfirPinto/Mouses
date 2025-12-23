@@ -24,6 +24,7 @@ sratoolkit*/
 Miniconda3*.sh
 *.tar.gz
 *.zip
+*.csv
 
 # === Intermediate Processing Files (Optional) ===
 # אם אתה רוצה לשמור את התוצאות המעובדות בגיט, תשאיר את השורות האלו בהערה.

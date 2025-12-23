@@ -1,0 +1,67 @@
+--- Starting Repeated Random Split Sweep (10 repeats per k) ---
+Log saved to: /home/pintokf/Projects/Microbium/Mouses/Ratio_model_metabolites/hyper_feature_selection/simple_split_10_times_feature_selection_results.txt
+Total Censored samples: 50
+Total Uncensored samples: 22
+
+############################################################
+>>> Testing Top 10 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.3846   Split 2/10: CI=0.3158   Split 3/10: CI=0.7600   Split 4/10: CI=0.3529   Split 5/10: CI=0.2105   Split 6/10: CI=0.9091   Split 7/10: CI=0.4062   Split 8/10: CI=0.3824   Split 9/10: CI=0.4706   Split 10/10: CI=0.7727
+   >>> Average for k=10: CI=0.4965 (+/- 0.2203)
+
+############################################################
+>>> Testing Top 25 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.2692   Split 2/10: CI=0.3684   Split 3/10: CI=0.5600   Split 4/10: CI=0.4118   Split 5/10: CI=0.3684   Split 6/10: CI=0.2727   Split 7/10: CI=0.5000   Split 8/10: CI=0.2059   Split 9/10: CI=0.5000   Split 10/10: CI=0.6818
+   >>> Average for k=25: CI=0.4138 (+/- 0.1401)
+
+############################################################
+>>> Testing Top 50 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.1154   Split 2/10: CI=0.7368   Split 3/10: CI=0.3600   Split 4/10: CI=0.5882   Split 5/10: CI=0.2105   Split 6/10: CI=0.1818   Split 7/10: CI=0.5312   Split 8/10: CI=0.3529   Split 9/10: CI=0.4118   Split 10/10: CI=0.5909
+   >>> Average for k=50: CI=0.4080 (+/- 0.1925)
+
+############################################################
+>>> Testing Top 100 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.4231   Split 2/10: CI=0.4737   Split 3/10: CI=0.3600   Split 4/10: CI=0.6471   Split 5/10: CI=0.3158   Split 6/10: CI=0.2727   Split 7/10: CI=0.2500   Split 8/10: CI=0.4412   Split 9/10: CI=0.2353   Split 10/10: CI=0.5000
+   >>> Average for k=100: CI=0.3919 (+/- 0.1235)
+
+############################################################
+>>> Testing Top 250 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.5769   Split 2/10: CI=0.3684   Split 3/10: CI=0.6000   Split 4/10: CI=0.2941   Split 5/10: CI=0.5263   Split 6/10: CI=0.6364   Split 7/10: CI=0.3438   Split 8/10: CI=0.5588   Split 9/10: CI=0.3529   Split 10/10: CI=0.3182
+   >>> Average for k=250: CI=0.4576 (+/- 0.1263)
+
+############################################################
+>>> Testing Top 500 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.2692   Split 2/10: CI=0.4211   Split 3/10: CI=0.6400   Split 4/10: CI=0.3529   Split 5/10: CI=0.5789   Split 6/10: CI=0.5455   Split 7/10: CI=0.6875   Split 8/10: CI=0.4118   Split 9/10: CI=0.3824   Split 10/10: CI=0.3636
+   >>> Average for k=500: CI=0.4653 (+/- 0.1313)
+
+############################################################
+>>> Testing Top 1000 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.3846   Split 2/10: CI=0.2105   Split 3/10: CI=0.5600   Split 4/10: CI=0.4706   Split 5/10: CI=0.4211   Split 6/10: CI=0.2727   Split 7/10: CI=0.4062   Split 8/10: CI=0.4118   Split 9/10: CI=0.3529   Split 10/10: CI=0.5909
+   >>> Average for k=1000: CI=0.4081 (+/- 0.1102)
+
+############################################################
+>>> Testing Top 1889 features (Running 10 splits) <<<
+############################################################
+   Split 1/10: CI=0.6538   Split 2/10: CI=0.5263   Split 3/10: CI=0.3200   Split 4/10: CI=0.3529   Split 5/10: CI=0.5789   Split 6/10: CI=0.4545   Split 7/10: CI=0.5938   Split 8/10: CI=0.5294   Split 9/10: CI=0.4412   Split 10/10: CI=0.5455
+   >>> Average for k=1889: CI=0.4996 (+/- 0.1009)
+
+================================================================================
+FINAL AGGREGATED RESULTS (10 Random 70/30 Splits per k)
+================================================================================
+ Features_Selected  Mean_CI   Std_CI  Mean_Spearman  Mean_Pearson
+              1889 0.499639 0.100928       0.042763      0.059501
+                10 0.496488 0.220312      -0.039565     -0.131765
+               500 0.465288 0.131279      -0.099509     -0.104326
+               250 0.457584 0.126282      -0.105848     -0.189529
+                25 0.413827 0.140080      -0.222928     -0.205815
+              1000 0.408137 0.110244      -0.243339     -0.201473
+                50 0.407967 0.192457      -0.195953     -0.175541
+               100 0.391881 0.123513      -0.272022     -0.259295
+
+Best average configuration: 1889.0 features.

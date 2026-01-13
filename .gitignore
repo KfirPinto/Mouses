@@ -25,6 +25,9 @@ Miniconda3*.sh
 *.tar.gz
 *.zip
 *.csv
+*.tsv
+*.qza
+
 
 # === Intermediate Processing Files (Optional) ===
 # אם אתה רוצה לשמור את התוצאות המעובדות בגיט, תשאיר את השורות האלו בהערה.

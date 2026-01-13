@@ -1,0 +1,71 @@
+>>> Output Directory: /home/pintokf/Projects/Microbium/Mouses/results/Metabolites/Ratio_age2
+>>> Model Configuration: {'target_col': 'diff', 'id_col': 'MiceName', 'age_col': 'AgeMonths', 'num_of_bact': 1889, 'feature_selection': 10, 'with_microbiome': True, 'augmented_censored': False, 'gamma': 0.0, 'only_microbiome': True, 'alpha': 0.001, 'categories': []}
+
+>>> MODE: Hyperparameter Search <<<
+
+--- Testing feature_selection k=10 ---
+
+Results for results_k10:
+  C-Index: 0.0714
+  Spearman: -0.9276 (p=0.007666)
+  Pearson: -0.8122 (p=0.0496)
+
+--- Testing feature_selection k=25 ---
+
+Results for results_k25:
+  C-Index: 0.3571
+  Spearman: -0.3479 (p=0.4993)
+  Pearson: -0.1415 (p=0.7892)
+
+--- Testing feature_selection k=50 ---
+
+Results for results_k50:
+  C-Index: 0.5000
+  Spearman: 0.0870 (p=0.8699)
+  Pearson: 0.0624 (p=0.9065)
+
+--- Testing feature_selection k=100 ---
+
+Results for results_k100:
+  C-Index: 0.5000
+  Spearman: -0.0580 (p=0.9131)
+  Pearson: 0.1229 (p=0.8165)
+
+--- Testing feature_selection k=250 ---
+
+Results for results_k250:
+  C-Index: 0.5000
+  Spearman: 0.0290 (p=0.9565)
+  Pearson: -0.0036 (p=0.9946)
+
+--- Testing feature_selection k=500 ---
+
+Results for results_k500:
+  C-Index: 0.5000
+  Spearman: 0.0290 (p=0.9565)
+  Pearson: -0.0982 (p=0.8532)
+
+--- Testing feature_selection k=1000 ---
+
+Results for results_k1000:
+  C-Index: 0.5714
+  Spearman: 0.2899 (p=0.5774)
+  Pearson: 0.0300 (p=0.955)
+
+--- Testing feature_selection k=1889 ---
+
+Results for results_k1889:
+  C-Index: 0.4286
+  Spearman: -0.2029 (p=0.6998)
+  Pearson: -0.2772 (p=0.5948)
+
+=== Hyperparameter Search Results ===
+    c_index  spearman   pearson  p_spearman     k
+6  0.571429  0.289886  0.029994    0.577352  1000
+2  0.500000  0.086966  0.062405    0.869880    50
+3  0.500000 -0.057977  0.122940    0.913132   100
+4  0.500000  0.028989 -0.003570    0.956529   250
+5  0.500000  0.028989 -0.098168    0.956529   500
+7  0.428571 -0.202920 -0.277235    0.699798  1889
+1  0.357143 -0.347863 -0.141479    0.499253    25
+0  0.071429 -0.927634 -0.812187    0.007666    10

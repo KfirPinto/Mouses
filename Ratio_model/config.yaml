@@ -1,0 +1,85 @@
+# ============================================================================
+# Unified Ratio Model Configuration
+# ============================================================================
+# Modify the parameters below for different experiments.
+# All paths are relative to the Mouses folder.
+# 
+# Quick Start:
+#   Single run:  python Ratio_model/main.py
+#   Hyper search: python Ratio_model/main.py --hyper
+# ============================================================================
+
+# ============================================================================
+# OUTPUT SETTINGS
+# ============================================================================
+output_settings:
+  # Base folder for results (relative to Mouses folder)
+  base_folder: "results"
+  
+  # Experiment group name (subfolder for this experiment)
+  experiment_group: "Partial_data_level_7"
+  
+  # Model name (subfolder within experiment_group)
+  model_name: "Locate_unfiltered"
+
+# ============================================================================
+# DATA CONFIGURATION
+# ============================================================================
+data:
+  # Path to censored data CSV (relative to Mouses folder)
+  censored_path: "Preprocess_ratio/Partial_data/preprocces_ratio_locate/locate_censored_level_7.csv"
+  
+  # Path to uncensored data CSV (relative to Mouses folder)
+  uncensored_path: "Preprocess_ratio/Partial_data/preprocces_ratio_locate/locate_uncensored_level_7.csv"
+
+  # Filter by age (in months)
+  # Set to null for all ages, or specify: 2, 4, etc.
+  age_filter: null
+
+# ============================================================================
+# MODEL PARAMETERS
+# ============================================================================
+model_params:
+  # Target variable column name
+  target_col: "diff"
+  
+  # Sample/Mouse ID column name
+  id_col: "MiceName"
+  
+  # Age/Time column name
+  age_col: "AgeMonths"
+  
+  # Total number of available features in the dataset
+  num_of_bact: 10
+  
+  # Number of features to select during training
+  feature_selection: 10
+  
+  # Include microbiome features
+  with_microbiome: true
+  
+  # Use augmented censored data
+  augmented_censored: false
+  
+  # Regularization parameter
+  gamma: 0.0
+  
+  # Use only microbiome features (if with_microbiome=true)
+  only_microbiome: true
+  
+  # Learning rate parameter
+  alpha: 0.001
+  
+  # Categories for stratification (leave as empty list)
+  categories: []
+
+# ============================================================================
+# HYPERPARAMETER SEARCH (used with --hyper flag)
+# ============================================================================
+hyperparameters:
+  # List of k (feature selection) values to test
+  #k_values: [5, 10, 15, 20, 25, 30, 35]
+  #k_values: [10, 25, 50, 100, 250, 500, 1000, 1889]
+  k_values: [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
+
+

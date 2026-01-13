@@ -1,0 +1,71 @@
+>>> Output Directory: /home/pintokf/Projects/Microbium/Mouses/results/Metabolites/Ratio_age4
+>>> Model Configuration: {'target_col': 'diff', 'id_col': 'MiceName', 'age_col': 'AgeMonths', 'num_of_bact': 1889, 'feature_selection': 10, 'with_microbiome': True, 'augmented_censored': False, 'gamma': 0.0, 'only_microbiome': True, 'alpha': 0.001, 'categories': []}
+
+>>> MODE: Hyperparameter Search <<<
+
+--- Testing feature_selection k=10 ---
+
+Results for results_k10:
+  C-Index: 0.4554
+  Spearman: -0.1235 (p=0.6485)
+  Pearson: -0.0946 (p=0.7275)
+
+--- Testing feature_selection k=25 ---
+
+Results for results_k25:
+  C-Index: 0.6634
+  Spearman: 0.3887 (p=0.1368)
+  Pearson: 0.4421 (p=0.08639)
+
+--- Testing feature_selection k=50 ---
+
+Results for results_k50:
+  C-Index: 0.6139
+  Spearman: 0.2531 (p=0.3443)
+  Pearson: 0.2469 (p=0.3566)
+
+--- Testing feature_selection k=100 ---
+
+Results for results_k100:
+  C-Index: 0.5842
+  Spearman: 0.2471 (p=0.3563)
+  Pearson: 0.0831 (p=0.7595)
+
+--- Testing feature_selection k=250 ---
+
+Results for results_k250:
+  C-Index: 0.4950
+  Spearman: 0.0633 (p=0.8159)
+  Pearson: 0.1576 (p=0.56)
+
+--- Testing feature_selection k=500 ---
+
+Results for results_k500:
+  C-Index: 0.3168
+  Spearman: -0.4188 (p=0.1064)
+  Pearson: -0.4346 (p=0.09249)
+
+--- Testing feature_selection k=1000 ---
+
+Results for results_k1000:
+  C-Index: 0.4455
+  Spearman: -0.0663 (p=0.8073)
+  Pearson: 0.2802 (p=0.2932)
+
+--- Testing feature_selection k=1889 ---
+
+Results for results_k1889:
+  C-Index: 0.6436
+  Spearman: 0.3194 (p=0.2279)
+  Pearson: 0.3767 (p=0.1504)
+
+=== Hyperparameter Search Results ===
+    c_index  spearman   pearson  p_spearman     k
+1  0.663366  0.388667  0.442133    0.136807    25
+7  0.643564  0.319370  0.376719    0.227914  1889
+2  0.613861  0.253086  0.246902    0.344278    50
+3  0.584158  0.247060  0.083140    0.356273   100
+4  0.495050  0.063271  0.157585    0.815926   250
+0  0.455446 -0.123530 -0.094573    0.648541    10
+6  0.445545 -0.066284  0.280227    0.807310  1000
+5  0.316832 -0.418796 -0.434644    0.106411   500

@@ -1,0 +1,87 @@
+>>> Output Directory: /home/pintokf/Projects/Microbium/Mouses/results/Partial_data_level_6/Locate_age4
+>>> Model Configuration: {'target_col': 'diff', 'id_col': 'MiceName', 'age_col': 'AgeMonths', 'num_of_bact': 10, 'feature_selection': 10, 'with_microbiome': True, 'augmented_censored': False, 'gamma': 0.0, 'only_microbiome': True, 'alpha': 0.001, 'categories': []}
+
+>>> MODE: Hyperparameter Search <<<
+
+--- Testing feature_selection k=1 ---
+
+Results for results_k1:
+  C-Index: 0.4851
+  Spearman: -0.0783 (p=0.7731)
+  Pearson: -0.2283 (p=0.3952)
+
+--- Testing feature_selection k=2 ---
+
+Results for results_k2:
+  C-Index: 0.3861
+  Spearman: -0.3013 (p=0.2568)
+  Pearson: -0.3553 (p=0.1769)
+
+--- Testing feature_selection k=3 ---
+
+Results for results_k3:
+  C-Index: 0.3564
+  Spearman: -0.3073 (p=0.2469)
+  Pearson: -0.3522 (p=0.1809)
+
+--- Testing feature_selection k=4 ---
+
+Results for results_k4:
+  C-Index: 0.4257
+  Spearman: -0.1898 (p=0.4814)
+  Pearson: -0.1181 (p=0.663)
+
+--- Testing feature_selection k=5 ---
+
+Results for results_k5:
+  C-Index: 0.5446
+  Spearman: 0.0874 (p=0.7476)
+  Pearson: 0.0776 (p=0.7752)
+
+--- Testing feature_selection k=6 ---
+
+Results for results_k6:
+  C-Index: 0.4851
+  Spearman: -0.0151 (p=0.9558)
+  Pearson: 0.0703 (p=0.7958)
+
+--- Testing feature_selection k=7 ---
+
+Results for results_k7:
+  C-Index: 0.4653
+  Spearman: -0.0964 (p=0.7224)
+  Pearson: -0.0224 (p=0.9344)
+
+--- Testing feature_selection k=8 ---
+
+Results for results_k8:
+  C-Index: 0.5545
+  Spearman: 0.1506 (p=0.5776)
+  Pearson: 0.2230 (p=0.4065)
+
+--- Testing feature_selection k=9 ---
+
+Results for results_k9:
+  C-Index: 0.4257
+  Spearman: -0.1506 (p=0.5776)
+  Pearson: -0.1139 (p=0.6744)
+
+--- Testing feature_selection k=10 ---
+
+Results for results_k10:
+  C-Index: 0.4158
+  Spearman: -0.1898 (p=0.4814)
+  Pearson: -0.1424 (p=0.5988)
+
+=== Hyperparameter Search Results ===
+    c_index  spearman   pearson  p_spearman   k
+7  0.554455  0.150646  0.222963    0.577597   8
+4  0.544554  0.087375  0.077585    0.747631   5
+0  0.485149 -0.078336 -0.228262    0.773064   1
+5  0.485149 -0.015065  0.070331    0.955841   6
+6  0.465347 -0.096414 -0.022393    0.722440   7
+3  0.425743 -0.189814 -0.118145    0.481365   4
+8  0.425743 -0.150646 -0.113915    0.577597   9
+9  0.415842 -0.189814 -0.142392    0.481365  10
+1  0.386139 -0.301292 -0.355287    0.256790   2
+2  0.356436 -0.307318 -0.352199    0.246926   3

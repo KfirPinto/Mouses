@@ -9,7 +9,7 @@ otu_path = "mouses_data/clean_fastq/exports/otu.csv"
 # שנה את השורה הזו אם הקובץ שלך נקרא אחרת
 tax_path = "mouses_data/clean_fastq/exports/tax.tsv/taxonomy.csv" 
 
-output_dir = "Union_tables"
+output_dir = "Union_tables_To_MIPMLP/check_duplicates_unique"
 output_filename = "final_merged_table.csv"
 
 # === בדיקת תקינות נתיבים ===

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # נתיב לקובץ המאוחד שיצרנו בשלב הקודם
-file_path = "Union_tables/final_merged_table.csv"
+file_path = "Union_tables_To_MIPMLP/check_duplicates_unique/final_merged_table.csv"
 
 print("Loading table...")
 try:

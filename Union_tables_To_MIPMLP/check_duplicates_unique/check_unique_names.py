@@ -1,7 +1,7 @@
 import pandas as pd
 
 # נתיב לקובץ
-file_path = "Union_tables/final_merged_table.csv"
+file_path = "Union_tables_To_MIPMLP/check_duplicates_unique/final_merged_table.csv"
 
 try:
     df = pd.read_csv(file_path)

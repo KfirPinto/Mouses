@@ -4,7 +4,7 @@ import os
 
 # === Settings ===
 input_path = "/home/pintokf/Projects/Microbium/Mouses/Union_tables_To_MIPMLP/for_preprocess.csv"
-output_dir = "/home/pintokf/Projects/Microbium/Mouses/MIPMLP_scripts"
+output_dir = "/home/pintokf/Projects/Microbium/Mouses/MIPMLP_scripts/whole_metadata"
 
 # === Helper function for proper saving with ID ===
 def save_with_id(df_result, filename):

@@ -16,6 +16,7 @@ __pycache__/
 databases/
 mouses_data/clean_fastq/
 mouses_data/classifier/
+mouses_data_old/
 # We ignore the raw fastq in mouses_2_data but KEEP the metadata.txt
 mouses_2_data/*.fastq.gz
 

@@ -25,7 +25,6 @@ sratoolkit*/
 Miniconda3*.sh
 *.tar.gz
 *.zip
-*.csv
 *.tsv
 *.qza
 

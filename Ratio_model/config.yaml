@@ -17,27 +17,25 @@ output_settings:
   base_folder: "results"
   
   # Experiment group name (subfolder for this experiment)
-  experiment_group: "Whole_data_level_7"
+  experiment_group: "Whole_data_level_6"
   
   # Model name (subfolder within experiment_group)
-  model_name: "Locate_age6"
+  model_name: "Locate_unfiltered"
 
 #Microbium_unfiltered
-#Microbium_age2
-#Microbium_age4
 # ============================================================================
 # DATA CONFIGURATION
 # ============================================================================
 data:
   # Path to censored data CSV (relative to Mouses folder)
-  censored_path: "Preprocess_ratio/Whole_data/preprocces_ratio_locate/locate_censored_level_7.csv"
+  censored_path: "Preprocess_ratio/Whole_data/preprocces_ratio_locate/locate_censored_level_6.csv"
   
   # Path to uncensored data CSV (relative to Mouses folder)
-  uncensored_path: "Preprocess_ratio/Whole_data/preprocces_ratio_locate/locate_uncensored_level_7.csv"
+  uncensored_path: "Preprocess_ratio/Whole_data/preprocces_ratio_locate/locate_uncensored_level_6.csv"
 
   # Filter by age (in months)
   # Set to null for all ages, or specify: 2, 4, etc.
-  age_filter: 6
+  age_filter: null
 
 # ============================================================================
 # MODEL PARAMETERS

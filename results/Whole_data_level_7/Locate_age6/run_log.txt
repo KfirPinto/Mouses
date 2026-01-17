@@ -1,6 +1,0 @@
->>> Output Directory: /home/pintokf/Projects/Microbium/Mouses/results/Whole_data_level_7/Locate_age6
->>> Model Configuration: {'target_col': 'diff', 'id_col': 'MiceName', 'age_col': 'AgeMonths', 'num_of_bact': 10, 'feature_selection': 1, 'with_microbiome': True, 'augmented_censored': False, 'gamma': 0.0, 'only_microbiome': True, 'alpha': 0.001, 'categories': []}
-
->>> MODE: Hyperparameter Search <<<
-
---- Testing feature_selection k=1 ---

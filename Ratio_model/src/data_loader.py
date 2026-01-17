@@ -28,5 +28,12 @@ def load_and_prep_data(censored_path, uncensored_path, age_filter=None):
     censored["Cage"] = [str(i).split("-")[0] for i in censored.index]
     uncensored["Cage"] = [str(i).split("-")[0] for i in uncensored.index]
 
+    # Remove rows with NaN in target column (critical for feature selection to work)
+    target_col = [c for c in uncensored.columns if "diff" in c.lower()][0]
+    uncensored_before = len(uncensored)
+    uncensored = uncensored.dropna(subset=[target_col])
+    if len(uncensored) < uncensored_before:
+        print(f"Removed {uncensored_before - len(uncensored)} samples with NaN in target column")
+
     print(f"Loaded: {len(censored)} censored, {len(uncensored)} uncensored samples.")
     return censored, uncensored

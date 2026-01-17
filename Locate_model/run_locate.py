@@ -8,10 +8,10 @@ import os
 # === Settings ===
 base_path = "/home/pintokf/Projects/Microbium/Mouses"
 # Inputs
-micro_path = f"{base_path}/MIPMLP_scripts/processed_subpca_level7.csv"
+micro_path = f"{base_path}/MIPMLP_scripts/whole_metadata/processed_subpca_level6.csv"
 metabo_path = f"{base_path}/preprocess_metabolits/preprocessed_metabolites_normalized_z_score.csv"
 # Outputs
-output_dir = f"{base_path}/Locate_model"
+output_dir = f"{base_path}/Locate_model/Whole_data"
 
 # Ensure output directory exists
 os.makedirs(output_dir, exist_ok=True)
@@ -123,5 +123,5 @@ if __name__ == '__main__':
     print("\n--- 6. Saving Z Files for RATIO ---")
     
     # Use the new robust save function
-    save_z(Z_train_matrix, X_train.index, "locate_Z_train_level_7.csv")
-    save_z(Z_val_matrix, X_val.index, "locate_Z_test_level_7.csv")
+    save_z(Z_train_matrix, X_train.index, "locate_Z_train_level_6.csv")
+    save_z(Z_val_matrix, X_val.index, "locate_Z_test_level_6.csv")

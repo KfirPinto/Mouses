@@ -74,7 +74,9 @@ def run_logo_cv(censored, uncensored, params, feature_k):
             all_predictions.append(fold_res)
             
         except Exception as e:
+            import traceback
             print(f"Error in Cage {current_cage}: {e}")
+            traceback.print_exc()
 
     if not all_predictions:
         return None

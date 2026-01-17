@@ -7,10 +7,10 @@ from scipy.stats import spearmanr
 
 # === נתיבים (התאם לפי הצורך) ===
 base_path = "/home/pintokf/Projects/Microbium/Mouses"
-z_train_path = f"{base_path}/Locate_model/locate_Z_train_level_6.csv"
-z_test_path = f"{base_path}/Locate_model/locate_Z_test_level_6.csv"
+z_train_path = f"{base_path}/Locate_model/Whole_data/locate_Z_train_level_7.csv"
+z_test_path = f"{base_path}/Locate_model/Whole_data/locate_Z_test_level_7.csv"
 metabo_path = f"{base_path}/preprocess_metabolits/preprocessed_metabolites_normalized_z_score.csv"
-output_dir = f"{base_path}/Locate_model/Evaluation"
+output_dir = f"{base_path}/Locate_model/Evaluation/Whole_data"
 
 def evaluate_z():
     print("--- 1. Loading Data ---")
@@ -107,7 +107,7 @@ def evaluate_z():
     plt.legend()
     plt.grid(alpha=0.3)
     
-    plot_path = f"{output_dir}/z_quality_evaluation_6.png"
+    plot_path = f"{output_dir}/z_quality_evaluation_7.png"
     plt.savefig(plot_path)
     print(f"\n✅ Plot saved to: {plot_path}")
 

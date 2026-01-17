@@ -1,0 +1,63 @@
+>>> Output Directory: /home/pintokf/Projects/Microbium/Mouses/results/Whole_data_level_7/Microbium_age2
+>>> Model Configuration: {'target_col': 'diff', 'id_col': 'MiceName', 'age_col': 'AgeMonths', 'num_of_bact': 35, 'feature_selection': 35, 'with_microbiome': True, 'augmented_censored': False, 'gamma': 0.0, 'only_microbiome': True, 'alpha': 0.001, 'categories': []}
+
+>>> MODE: Hyperparameter Search <<<
+
+--- Testing feature_selection k=5 ---
+
+Results for results_k5:
+  C-Index: 0.6612
+  Spearman: 0.3839 (p=0.1282)
+  Pearson: 0.2275 (p=0.38)
+
+--- Testing feature_selection k=10 ---
+
+Results for results_k10:
+  C-Index: 0.6033
+  Spearman: 0.3069 (p=0.2309)
+  Pearson: 0.1259 (p=0.6303)
+
+--- Testing feature_selection k=15 ---
+
+Results for results_k15:
+  C-Index: 0.5785
+  Spearman: 0.1739 (p=0.5044)
+  Pearson: 0.1994 (p=0.4428)
+
+--- Testing feature_selection k=20 ---
+
+Results for results_k20:
+  C-Index: 0.5455
+  Spearman: 0.1329 (p=0.611)
+  Pearson: 0.1394 (p=0.5935)
+
+--- Testing feature_selection k=25 ---
+
+Results for results_k25:
+  C-Index: 0.5868
+  Spearman: 0.2696 (p=0.2954)
+  Pearson: 0.1737 (p=0.505)
+
+--- Testing feature_selection k=30 ---
+
+Results for results_k30:
+  C-Index: 0.6446
+  Spearman: 0.3851 (p=0.1269)
+  Pearson: 0.3984 (p=0.1132)
+
+--- Testing feature_selection k=35 ---
+
+Results for results_k35:
+  C-Index: 0.6198
+  Spearman: 0.3106 (p=0.225)
+  Pearson: 0.3661 (p=0.1484)
+
+=== Hyperparameter Search Results ===
+    c_index  spearman   pearson  p_spearman   k
+0  0.661157  0.383887  0.227455    0.128202   5
+5  0.644628  0.385129  0.398446    0.126868  30
+6  0.619835  0.310588  0.366062    0.225001  35
+1  0.603306  0.306861  0.125867    0.230908  10
+4  0.586777  0.269590  0.173686    0.295368  25
+2  0.578512  0.173929  0.199447    0.504374  15
+3  0.545455  0.132932  0.139439    0.611025  20

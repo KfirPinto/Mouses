@@ -1,0 +1,11 @@
+>>> Output Directory: /home/pintokf/Projects/Microbium/Mouses/results/Whole_data_level_6/Winner_For_Microbiome
+>>> Model Configuration: {'target_col': 'diff', 'id_col': 'MiceName', 'age_col': 'AgeMonths', 'num_of_bact': 35, 'feature_selection': 5, 'with_microbiome': True, 'augmented_censored': False, 'gamma': 0.0, 'only_microbiome': True, 'alpha': 0.001, 'categories': []}
+
+>>> MODE: Single Run <<<
+Running with k=5
+
+Results for final_results:
+  C-Index: 0.7025
+  Spearman: 0.4696 (p=0.05718)
+  Pearson: 0.2348 (p=0.3642)
+Done.

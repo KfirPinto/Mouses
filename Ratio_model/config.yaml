@@ -17,10 +17,10 @@ output_settings:
   base_folder: "results"
   
   # Experiment group name (subfolder for this experiment)
-  experiment_group: "Whole_data_level_6"
+  experiment_group: "Metabolites"
   
   # Model name (subfolder within experiment_group)
-  model_name: "Locate_unfiltered"
+  model_name: "Winner_For_Metabolites"
 
 #Microbium_unfiltered
 # ============================================================================
@@ -28,14 +28,14 @@ output_settings:
 # ============================================================================
 data:
   # Path to censored data CSV (relative to Mouses folder)
-  censored_path: "Preprocess_ratio/Whole_data/preprocces_ratio_locate/locate_censored_level_6.csv"
+  censored_path: "/home/pintokf/Projects/Microbium/Mouses/Preprocess_ratio/preprocces_ratio_metabolites/metabolites_censored.csv"
   
   # Path to uncensored data CSV (relative to Mouses folder)
-  uncensored_path: "Preprocess_ratio/Whole_data/preprocces_ratio_locate/locate_uncensored_level_6.csv"
+  uncensored_path: "Preprocess_ratio/preprocces_ratio_metabolites/metabolites_uncensored.csv"
 
   # Filter by age (in months)
   # Set to null for all ages, or specify: 2, 4, etc.
-  age_filter: null
+  age_filter: 4
 
 # ============================================================================
 # MODEL PARAMETERS
@@ -51,10 +51,10 @@ model_params:
   age_col: "AgeMonths"
   
   # Total number of available features in the dataset
-  num_of_bact: 10
+  num_of_bact: 1889
   
   # Number of features to select during training
-  feature_selection: 1
+  feature_selection: 25
   
   # Include microbiome features
   with_microbiome: true

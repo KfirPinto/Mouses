@@ -11,14 +11,14 @@ from sklearn.preprocessing import StandardScaler
 warnings.filterwarnings("ignore")
 
 # Paths
-base_path = "/home/pintokf/Projects/Microbium/Mouses/Preprocess_ratio/Whole_data/Preprocces_ratio_microbiome/"
-output_dir = "/home/pintokf/Projects/Microbium/Mouses/results/Whole_data_level_6/Winner_For_Microbiome"
+base_path = "/home/pintokf/Projects/Microbium/Mouses/Preprocess_ratio/Whole_data/preprocces_ratio_locate/inference/"
+output_dir = "/home/pintokf/Projects/Microbium/Mouses/results/Whole_data_level_6/Winner_For_Locate_Inference"
 
-# Configuration (Based on run_log.txt: k=5)
-NUM_FEATURES = 5
-DATA_FILE = "data_level6_uncensored.csv"
+# Configuration (Standard Winner for LOCATE: k=10)
+NUM_FEATURES = 1
+DATA_FILE = "locate_uncensored_level_6.csv"
 
-print(f"--- Starting Microbiome Coefficient Extraction (Whole Data Level 6, Top {NUM_FEATURES}) ---")
+print(f"--- Starting LOCATE Coefficient Extraction (Whole Data Level 6, Top {NUM_FEATURES}) ---")
 
 # --- 2. Load Data ---
 uncensored = pd.read_csv(os.path.join(base_path, DATA_FILE), index_col=0)
@@ -60,7 +60,7 @@ corr_df = pd.DataFrame(correlations, columns=["Feature", "Abs_Corr", "Real_Corr"
 top_features_df = corr_df.sort_values(by="Abs_Corr", ascending=False).head(NUM_FEATURES)
 top_feature_names = top_features_df["Feature"].tolist()
 
-print(f"\nTop {NUM_FEATURES} Bacteria Selected:")
+print(f"\nTop {NUM_FEATURES} LOCATE Features Selected:")
 print(top_feature_names)
 
 # --- 5. Ridge Regression ---
@@ -85,16 +85,14 @@ for name, coeff in zip(top_feature_names, ridge.coef_):
         meaning = "Risk Factor"
         
     results.append({
-        "Bacteria": name,
+        "LOCATE_Feature": name,
         "Ridge_Coefficient": coeff,
         "Direction": direction,
         "Interpretation": meaning
     })
 
 results_df = pd.DataFrame(results).sort_values(by="Ridge_Coefficient", key=abs, ascending=False)
-output_file = os.path.join(output_dir, f"microbiome_top{NUM_FEATURES}_coeffs.csv")
+output_file = os.path.join(output_dir, f"locate_top{NUM_FEATURES}_coeffs.csv")
 results_df.to_csv(output_file, index=False)
 print(f"\nSaved to: {output_file}\n")
-
-print("--- Top 5 Features ---")
-print(results_df.head(5).to_string())
+print(results_df.to_string())

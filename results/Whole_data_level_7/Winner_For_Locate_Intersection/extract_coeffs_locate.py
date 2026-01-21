@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 warnings.filterwarnings("ignore")
 
 # Paths
-base_path = "/home/pintokf/Projects/Microbium/Mouses/Ratio_model_after_locate/preprocces_ratio_locate/"
+base_path = "/home/pintokf/Projects/Microbium/Mouses/Preprocess_ratio/Whole_data/preprocces_ratio_locate/"
 output_dir = "/home/pintokf/Projects/Microbium/Mouses/results/Whole_data_level_7/Winner_For_Locate"
 
 # Configuration (Standard Winner for LOCATE: k=10)
@@ -31,12 +31,17 @@ uncensored.columns = [clean_col_name(c) for c in uncensored.columns]
 
 # --- 3. Prepare X and y ---
 X_train_raw = uncensored.copy()
-cols_to_drop = ["diff", "AgeMonths", "MiceName", "Cage", "DeathDate", "DateOfBirth", "Gender", "Group"]
+cols_to_drop = ["diff", "AgeMonths", "MiceName", "Cage", "DeathDate", "DateOfBirth", "Gender", "Group", "Date", "DateEnd"]
 X_train = X_train_raw.drop(columns=cols_to_drop, errors='ignore')
 
 # Keep only numeric
 X_train = X_train.select_dtypes(include=[np.number])
 y_train = X_train_raw["diff"]
+
+# Remove rows with NaN in target variable
+valid_idx = ~y_train.isna()
+X_train = X_train[valid_idx]
+y_train = y_train[valid_idx]
 
 print(f"Data Loaded: {X_train.shape[0]} samples")
 

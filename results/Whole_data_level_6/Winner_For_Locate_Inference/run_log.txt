@@ -1,0 +1,11 @@
+>>> Output Directory: /home/pintokf/Projects/Microbium/Mouses/results/Whole_data_level_6/Winner_For_Locate_Inference
+>>> Model Configuration: {'target_col': 'diff', 'id_col': 'MiceName', 'age_col': 'AgeMonths', 'num_of_bact': 10, 'feature_selection': 1, 'with_microbiome': True, 'augmented_censored': False, 'gamma': 0.0, 'only_microbiome': True, 'alpha': 0.001, 'categories': []}
+
+>>> MODE: Single Run <<<
+Running with k=1
+
+Results for final_results:
+  C-Index: 0.9231
+  Spearman: 0.8107 (p=0.008033)
+  Pearson: 0.7801 (p=0.01314)
+Done.

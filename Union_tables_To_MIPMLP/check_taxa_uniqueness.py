@@ -17,55 +17,66 @@ except IndexError:
     print("Could not find a column with 'Taxon' in its name.")
     exit(1)
 
-# פונקציות חילוץ (משמשות רק כדי לדעת אם השורה היא Unassigned או לא)
+# פונקציות חילוץ - מזהה אם יש g__ או s__ בטקסט (גם אם ריק)
 def has_genus(text):
-    if pd.isna(text) or "g__" not in text: return False
-    val = text.split("g__")[-1].split(";")[0]
-    return val != "" and val != "Unassigned"
+    if pd.isna(text): return False
+    return "g__" in text
 
 def has_species(text):
-    if pd.isna(text) or "s__" not in text: return False
-    val = text.split("s__")[-1].split(";")[0]
-    return val != "" and val != "Unassigned"
+    if pd.isna(text): return False
+    return "s__" in text
 
-# === בדיקת Genus ===
-# סינון: לוקחים רק שורות שיש להן סיווג Genus חוקי
-df_genus_assigned = df[df[tax_col].apply(has_genus)]
+# === בדיקת כל השורות (ALL) ===
+total_rows = len(df)
+unique_all_paths = df[tax_col].nunique()
 
-# ספירה: "יוניק" נחשב רק אם כל הנתיב הטקסונומי שונה
-unique_genera_paths = df_genus_assigned[tax_col].nunique()
-total_assigned_g = len(df_genus_assigned)
+print(f"=== ALL TAXONOMY PATHS ===")
+print(f"Total rows: {total_rows}")
+print(f"Unique Full Taxonomy Paths: {unique_all_paths}")
 
-print(f"--- Genus Level (g) ---")
-print(f"Total rows with assigned Genus: {total_assigned_g}")
-print(f"Unique Genus Paths (Full Taxonomy): {unique_genera_paths}")
-
-if total_assigned_g > unique_genera_paths:
-    print(f"NOTE: There are {total_assigned_g - unique_genera_paths} duplicated rows (exact same path).")
-    print("Most common Genus Paths (Top 3 duplicates):")
-    # ספירת החזרות של הנתיב המלא
-    print(df_genus_assigned[tax_col].value_counts().head(3))
+if total_rows > unique_all_paths:
+    print(f"Duplicates: {total_rows - unique_all_paths} rows share the exact same full taxonomy path.")
+    print("\nMost common paths (Top 5):")
+    print(df[tax_col].value_counts().head(5))
 else:
-    print("No duplicates found at Genus level (based on full path).")
+    print("All rows are unique (no duplicates).")
 
 print("\n" + "-"*50 + "\n")
 
-# === בדיקת Species ===
-# סינון: לוקחים רק שורות שיש להן סיווג Species חוקי
-df_species_assigned = df[df[tax_col].apply(has_species)]
+# === בדיקת Genus (כולל g__ ריק) ===
+# כל שורה שיש בה g__ (גם אם ריק) - ספירה לפי הנתיב המלא
+df_genus = df[df[tax_col].apply(has_genus)]
 
-# ספירה: "יוניק" נחשב רק אם כל הנתיב הטקסונומי שונה
-unique_species_paths = df_species_assigned[tax_col].nunique()
-total_assigned_s = len(df_species_assigned)
+unique_genera_paths = df_genus[tax_col].nunique()
+total_g = len(df_genus)
 
-print(f"--- Species Level (s) ---")
-print(f"Total rows with assigned Species: {total_assigned_s}")
-print(f"Unique Species Paths (Full Taxonomy): {unique_species_paths}")
+print(f"=== GENUS LEVEL (including empty g__) ===")
+print(f"Total rows with g__: {total_g}")
+print(f"Unique Paths: {unique_genera_paths}")
 
-if total_assigned_s > unique_species_paths:
-    print(f"NOTE: There are {total_assigned_s - unique_species_paths} duplicated rows (exact same path).")
-    print("Most common Species Paths (Top 3 duplicates):")
-    # ספירת החזרות של הנתיב המלא
-    print(df_species_assigned[tax_col].value_counts().head(3))
+if total_g > unique_genera_paths:
+    print(f"Duplicates: {total_g - unique_genera_paths} rows share the exact same path.")
+    print("\nMost common Genus-level paths (Top 5):")
+    print(df_genus[tax_col].value_counts().head(5))
 else:
-    print("No duplicates found at Species level (based on full path).")
+    print("All genus-level rows are unique.")
+
+print("\n" + "-"*50 + "\n")
+
+# === בדיקת Species (כולל s__ ריק) ===
+# כל שורה שיש בה s__ (גם אם ריק) - ספירה לפי הנתיב המלא
+df_species = df[df[tax_col].apply(has_species)]
+
+unique_species_paths = df_species[tax_col].nunique()
+total_s = len(df_species)
+
+print(f"=== SPECIES LEVEL (including empty s__) ===")
+print(f"Total rows with s__: {total_s}")
+print(f"Unique Paths: {unique_species_paths}")
+
+if total_s > unique_species_paths:
+    print(f"Duplicates: {total_s - unique_species_paths} rows share the exact same path.")
+    print("\nMost common Species-level paths (Top 5):")
+    print(df_species[tax_col].value_counts().head(5))
+else:
+    print("All species-level rows are unique.")

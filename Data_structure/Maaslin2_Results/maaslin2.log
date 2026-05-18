@@ -1,0 +1,79 @@
+2026-03-26 17:34:49.00234 INFO::Writing function arguments to log file
+2026-03-26 17:34:49.00982 DEBUG::Function arguments
+2026-03-26 17:34:49.015516 DEBUG::Output folder: /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results
+2026-03-26 17:34:49.015784 DEBUG::Min Abundance: 0.000000
+2026-03-26 17:34:49.016004 DEBUG::Min Prevalence: 0.100000
+2026-03-26 17:34:49.016226 DEBUG::Normalization: TSS
+2026-03-26 17:34:49.016428 DEBUG::Transform: LOG
+2026-03-26 17:34:49.016618 DEBUG::Analysis method: LM
+2026-03-26 17:34:49.016813 DEBUG::Max significance: 0.250000
+2026-03-26 17:34:49.017004 DEBUG::Random effects:
+2026-03-26 17:34:49.017211 DEBUG::Fixed effects: AgeNumeric
+2026-03-26 17:34:49.017408 DEBUG::Correction method: BH
+2026-03-26 17:34:49.017609 DEBUG::Standardize: FALSE
+2026-03-26 17:34:49.017818 DEBUG::Cores: 1
+2026-03-26 17:34:49.018015 INFO::Verifying options selected are valid
+2026-03-26 17:34:49.043726 INFO::Determining format of input files
+2026-03-26 17:34:49.044583 INFO::Input format is data samples as rows and metadata samples as rows
+2026-03-26 17:34:49.045461 DEBUG::The following samples were found to have metadata but no features. They will be removed. 14-0_03_21,14-0_07_20,14-0_09_20,14-0_11_20,14-1_01_21,14-1_09_20,14-2_03_21,14-2_07_20,14-2_11_20,15-0_01_21,15-0_05_20,15-0_09_20,15-0_11_20,16-0_03_21,16-1_05_20,16-1_06_21,16-1_09_20,16-2_01_21,16-2_03_21,16-2_05_20,16-2_06_21,16-2_11_20,18-0_05_20,18-0_07_20,18-1_05_21,18-1_07_20,18-1_11_20,18-2_05_21,19-0_05_20,19-0_09_20,19-1_09_20,19-2_05_20,19-2_05_21,19-2_06_21,19-2_07_20,20-2_01_21,20-2_07_20,21-0_05_20,21-0_07_20,21-1_03_21,21-1_11_20,21-2_05_20,21-2_09_20,22-0_05_20,22-0_11_20,22-1_06_21,22-1_07_20,23-0_06_21,23-0_09_20,23-2_03_21,23-2_06_21,24-0_07_20,24-0_11_20,24-1_01_21,24-1_03_21,24-2_03_21,24-2_07_20,24-2_09_20,25-0_03_21,25-0_07_20,25-0_09_20,25-1_07_20,25-2_03_21,25-2_05_21,25-2_11_20,26-0_03_21,26-0_05_20,26-0_11_20,26-1_05_20,27-0_01_21,27-1_07_20,27-2_01_21,28-0_03_21,28-0_06_21,28-0_09_20,28-1_05_20,28-1_06_21,28-1_07_20,29-0_07_20,29-1_01_21,29-1_06_21,29-2_05_20,29-2_09_20,30-0_03_21,30-0_07_20,30-1_06_21,30-1_07_20,30-1_09_20,30-2_05_20,30-2_11_20,31-0_07_20,31-0_09_21,31-1_07_20,31-1_09_20,31-1_11_20,32-1_01_21,32-1_06_21,32-2_01_21,32-2_03_21,33-1_03_21,33-2_11_20,34-0_05_21,34-1_05_20,34-1_11_20,35-0_05_20,35-1_05_21,35-1_11_20,35-2_05_20,36-0_06_21,36-0_07_20,36-1_07_20,36-2_01_21,37-0_05_20,37-0_07_20,37-0_11_20,37-1_03_21,37-1_05_20,37-1_07_20,37-1_09_20,37-1_09_21,37-1_11_20,38-0_01_21,38-0_03_21,38-0_05_20,38-1_01_21,39-0_05_20,39-0_09_20,39-1_05_20,39-1_07_20,39-1_09_20,40-0_05_21,40-0_07_20,40-2_01_21,40-2_09_21,41-0_01_21,41-0_09_21,41-1_07_20,42-0_05_20,42-1_01_21,42-1_05_20,42-1_09_21,43-1_03_21,43-1_05_20,43-1_09_20,43-1_09_21,43-1_11_20,44-0_07_20,44-0_09_21,44-1_03_21,44-2_09_20,45-0_01_21,45-0_03_21,45-0_09_20,45-0_11_20,45-1_01_21,45-1_07_20,45-1_09_20,45-2_05_20,45-2_06_21,45-2_09_20,45-2_09_21,46-0_06_21,46-0_09_20,46-1_01_21,46-1_03_21,46-1_06_21,46-1_11_20,47-0_01_21,47-0_03_21,47-0_07_20,47-0_09_20,47-1_05_20,47-1_11_20
+2026-03-26 17:34:49.045779 DEBUG::A total of 453 samples were found in both the data and metadata
+2026-03-26 17:34:49.046 DEBUG::Reordering data/metadata to use same sample ordering
+2026-03-26 17:34:49.047137 INFO::Formula for fixed effects: expr ~  AgeNumeric
+2026-03-26 17:34:49.048017 INFO::Filter data based on min abundance and min prevalence
+2026-03-26 17:34:49.048658 INFO::Total samples in data: 453
+2026-03-26 17:34:49.049264 INFO::Min samples required with min abundance for a feature not to be filtered: 45.300000
+2026-03-26 17:34:49.052396 INFO::Total filtered features: 27
+2026-03-26 17:34:49.053151 INFO::Filtered feature names from abundance and prevalence filtering: Blautia, k__Bacteria.p__Firmicutes.__.__.__.__, k__Bacteria.p__Firmicutes.c__Erysipelotrichi.o__Erysipelotrichales.f__Erysipelotrichaceae.__, Jeotgalicoccus, Sporosarcina, Anaerovorax, Roseburia, Staphylococcus, k__Bacteria.p__Firmicutes.c__Clostridia.__.__.__, Acinetobacter, k__Bacteria.p__Bacteroidetes.c__Bacteroidia.o__Bacteroidales.__.__, Nesterenkonia, Sediminibacterium, Candidatus.Arthromitus, Corynebacterium, Phascolarctobacterium, Aerococcus, k__Bacteria.p__Bacteroidetes.c__Bacteroidia.o__Bacteroidales.f__Paraprevotellaceae.__, Collinsella, Epulopiscium
+2026-03-26 17:34:49.068198 INFO::Total filtered features with variance filtering: 11
+2026-03-26 17:34:49.06894 INFO::Filtered feature names from variance filtering: LinkerPrimerSequence, ReversePrimer, barcode, WellPosition, mice_name, date_month, AgeMonth, group, death_age_month, death, metabolomics
+2026-03-26 17:34:49.06956 INFO::Running selected normalization method: TSS
+2026-03-26 17:34:49.846545 INFO::Bypass z-score application to metadata
+2026-03-26 17:34:49.847499 INFO::Running selected transform method: LOG
+2026-03-26 17:34:49.850504 INFO::Running selected analysis method: LM
+2026-03-26 17:34:49.8543 INFO::Fitting model to feature number 1, k__Bacteria.p__Firmicutes.c__Clostridia.o__Clostridiales.__.__
+2026-03-26 17:34:49.860779 INFO::Fitting model to feature number 2, Ruminococcus
+2026-03-26 17:34:49.863545 INFO::Fitting model to feature number 3, Lactobacillus
+2026-03-26 17:34:49.866136 INFO::Fitting model to feature number 4, Coprococcus
+2026-03-26 17:34:49.868761 INFO::Fitting model to feature number 5, Oscillospira
+2026-03-26 17:34:49.871316 INFO::Fitting model to feature number 6, k__Bacteria.p__Firmicutes.c__Clostridia.o__Clostridiales.f__Lachnospiraceae.__
+2026-03-26 17:34:49.873895 INFO::Fitting model to feature number 7, X
+2026-03-26 17:34:49.876541 INFO::Fitting model to feature number 8, X.1
+2026-03-26 17:34:49.879068 INFO::Fitting model to feature number 9, k__Bacteria.p__Firmicutes.c__Clostridia.o__Clostridiales.f__Ruminococcaceae.__
+2026-03-26 17:34:49.881673 INFO::Fitting model to feature number 10, X.2
+2026-03-26 17:34:49.884218 INFO::Fitting model to feature number 11, X.3
+2026-03-26 17:34:49.886756 INFO::Fitting model to feature number 12, Clostridium
+2026-03-26 17:34:49.889272 INFO::Fitting model to feature number 13, k__Bacteria.__.__.__.__.__
+2026-03-26 17:34:49.891801 INFO::Fitting model to feature number 14, Adlercreutzia
+2026-03-26 17:34:49.894316 INFO::Fitting model to feature number 15, Allobaculum
+2026-03-26 17:34:49.896887 INFO::Fitting model to feature number 16, Prevotella
+2026-03-26 17:34:49.899419 INFO::Fitting model to feature number 17, Dorea
+2026-03-26 17:34:49.901951 INFO::Fitting model to feature number 18, Ruminococcus.1
+2026-03-26 17:34:49.904462 INFO::Fitting model to feature number 19, k__Bacteria.p__Bacteroidetes.c__Bacteroidia.o__Bacteroidales.f__Rikenellaceae.__
+2026-03-26 17:34:49.907004 INFO::Fitting model to feature number 20, Bacteroides
+2026-03-26 17:34:49.909647 INFO::Fitting model to feature number 21, Bilophila
+2026-03-26 17:34:49.912207 INFO::Fitting model to feature number 22, k__Bacteria.p__Proteobacteria.c__Gammaproteobacteria.o__Enterobacteriales.f__Enterobacteriaceae.__
+2026-03-26 17:34:49.91474 INFO::Fitting model to feature number 23, X.4
+2026-03-26 17:34:49.917261 INFO::Fitting model to feature number 24, Bifidobacterium
+2026-03-26 17:34:49.919754 INFO::Fitting model to feature number 25, Alistipes
+2026-03-26 17:34:49.92226 INFO::Fitting model to feature number 26, Odoribacter
+2026-03-26 17:34:49.924775 INFO::Fitting model to feature number 27, Dehalobacterium
+2026-03-26 17:34:49.927288 INFO::Fitting model to feature number 28, k__Bacteria.p__Proteobacteria.__.__.__.__
+2026-03-26 17:34:49.929918 INFO::Fitting model to feature number 29, X.5
+2026-03-26 17:34:49.932454 INFO::Fitting model to feature number 30, Turicibacter
+2026-03-26 17:34:49.944355 INFO::Fitting model to feature number 31, Parabacteroides
+2026-03-26 17:34:49.946656 INFO::Fitting model to feature number 32, X.6
+2026-03-26 17:34:49.948815 INFO::Fitting model to feature number 33, Anaeroplasma
+2026-03-26 17:34:49.950951 INFO::Fitting model to feature number 34, Sutterella
+2026-03-26 17:34:49.953127 INFO::Fitting model to feature number 35, Akkermansia
+2026-03-26 17:34:49.955221 INFO::Fitting model to feature number 36, Plate
+2026-03-26 17:34:49.957326 INFO::Fitting model to feature number 37, date
+2026-03-26 17:34:49.959424 INFO::Fitting model to feature number 38, number
+2026-03-26 17:34:49.961524 INFO::Fitting model to feature number 39, AgeWeeks
+2026-03-26 17:34:49.972319 INFO::Counting total values for each feature
+2026-03-26 17:34:49.974579 INFO::Writing filtered data to file /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results/features/filtered_data.tsv
+2026-03-26 17:34:49.988976 INFO::Writing filtered, normalized data to file /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results/features/filtered_data_norm.tsv
+2026-03-26 17:34:50.003945 INFO::Writing filtered, normalized, transformed data to file /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results/features/filtered_data_norm_transformed.tsv
+2026-03-26 17:34:50.021895 INFO::Writing residuals to file /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results/fits/residuals.rds
+2026-03-26 17:34:50.027959 INFO::Writing fitted values to file /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results/fits/fitted.rds
+2026-03-26 17:34:50.030113 INFO::Writing all results to file (ordered by increasing q-values): /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results/all_results.tsv
+2026-03-26 17:34:50.031584 INFO::Writing the significant results (those which are less than or equal to the threshold of 0.250000 ) to file (ordered by increasing q-values): /home/pintokf/Projects/Microbium/Mouses/Data_structure/Maaslin2_Results/significant_results.tsv

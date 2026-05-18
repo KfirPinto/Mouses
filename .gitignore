@@ -27,7 +27,8 @@ Miniconda3*.sh
 *.zip
 *.tsv
 *.qza
-
+*.yaml
+*.yml
 
 # === Intermediate Processing Files (Optional) ===
 # אם אתה רוצה לשמור את התוצאות המעובדות בגיט, תשאיר את השורות האלו בהערה.

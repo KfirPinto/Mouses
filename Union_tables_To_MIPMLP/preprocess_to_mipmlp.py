@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 
-base_path = Path("mouses_data/clean_fastq/exports")
+base_path = Path("mouse_data_new/fastq/exports")
 
 otu_path = base_path / "otu.csv"
 taxonomy_path = base_path / "tax.tsv/taxonomy.csv"
